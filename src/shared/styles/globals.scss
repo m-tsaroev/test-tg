@@ -1,0 +1,73 @@
+#root {
+  display: contents;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-base);
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+main {
+  flex: 1;
+  padding-top: 30px;
+}
+
+h1,
+.h1 {
+  @include fluid-text(48, 32);
+
+  font-weight: 700;
+}
+
+h2,
+.h2 {
+  @include fluid-text(36, 20);
+  font-weight: 700;
+}
+
+h3,
+.h3 {
+  font-size: 20px;  
+  font-weight: 500;
+}
+
+h4,
+.h4 {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: inherit;
+
+  &[class] {
+    text-decoration: none;
+  }
+}
+
+:focus-visible {
+  @include focus-visible;
+}
+
+:has(.swiper) {
+  min-width: 0;
+}
